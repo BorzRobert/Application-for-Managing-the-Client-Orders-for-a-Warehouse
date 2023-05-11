@@ -14,7 +14,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
+/**
+ * Class used in order to model the GUI for creating a new order
+ */
 public class OrderView extends JDialog {
     private JComboBox clientComboBox;
     private JComboBox productComboBox;

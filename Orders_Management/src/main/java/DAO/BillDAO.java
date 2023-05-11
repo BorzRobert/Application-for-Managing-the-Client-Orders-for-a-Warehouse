@@ -13,11 +13,19 @@ import java.util.List;
 import java.util.logging.Level;
 import Connection.ConnectionFactory;
 
+/**
+ * Class used in order to access the mySQL database and create only Bill specific queries
+ */
 public class BillDAO extends AbstractDAO<Bill> {
 
 	// uses basic CRUD methods from superclass
 
 	// TODO: create only bill specific queries
+
+    /**
+     * Function used in order to retrieve in a list all the Object of type Bill from the database
+     * @return The list containing all the objects of type Bill from the database
+     */
     public List<Bill> findAllBills() {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -41,6 +49,11 @@ public class BillDAO extends AbstractDAO<Bill> {
         }
         return bills;
     }
+
+    /**
+     * Function used in order to create a less specific SELECT query
+     * @return The desired String containing the query
+     */
     private String createSelectQuery() {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT ");

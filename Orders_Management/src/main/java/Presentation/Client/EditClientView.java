@@ -7,7 +7,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Class used in order to model the GUI for editing a client
+ */
 public class EditClientView extends JDialog {
     private JTextField ageTextField;
     private JButton editButton;

@@ -7,7 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * This class is used in order to establish a connection to our MySQL database
+ * @author Borz Robert-Ionut
+ */
 public class ConnectionFactory {
 
 	private static final Logger LOGGER = Logger.getLogger(ConnectionFactory.class.getName());
@@ -18,6 +21,9 @@ public class ConnectionFactory {
 
 	private static ConnectionFactory singleInstance = new ConnectionFactory();
 
+	/**
+	 * Private constructor
+	 */
 	private ConnectionFactory() {
 		try {
 			Class.forName(DRIVER);
@@ -26,6 +32,10 @@ public class ConnectionFactory {
 		}
 	}
 
+	/**
+	 * This function is used in order to create a connection
+	 * @return The connection already created
+	 */
 	private Connection createConnection() {
 		Connection connection = null;
 		try {
@@ -36,11 +46,18 @@ public class ConnectionFactory {
 		}
 		return connection;
 	}
-
+	/**
+	 * This function is used in order to get the connection
+	 * @return The connection
+	 */
 	public static Connection getConnection() {
 		return singleInstance.createConnection();
 	}
 
+	/**
+	 * This function is used in order to close a connection
+	 * @param connection
+	 */
 	public static void close(Connection connection) {
 		if (connection != null) {
 			try {
@@ -51,6 +68,10 @@ public class ConnectionFactory {
 		}
 	}
 
+	/**
+	 * This function is used in order to close a Statement
+	 * @param statement
+	 */
 	public static void close(Statement statement) {
 		if (statement != null) {
 			try {
@@ -61,6 +82,10 @@ public class ConnectionFactory {
 		}
 	}
 
+	/**
+	 * This function is used in order to close a ResultSet
+	 * @param resultSet
+	 */
 	public static void close(ResultSet resultSet) {
 		if (resultSet != null) {
 			try {

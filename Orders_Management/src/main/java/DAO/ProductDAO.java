@@ -13,11 +13,19 @@ import java.util.logging.Level;
 
 import Connection.ConnectionFactory;
 
+/**
+ * Class used in order to access the mySQL database and create only Product specific queries
+ */
 public class ProductDAO extends AbstractDAO<Product> {
 
     // uses basic CRUD methods from superclass
 
     // TODO: create only product specific queries
+
+    /**
+     * Function used in order to retrieve in a list all the Object of type Product from the database
+     * @return The list containing all the objects of type Product from the database
+     */
     public List<Product> findAllProducts() {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -41,6 +49,12 @@ public class ProductDAO extends AbstractDAO<Product> {
         }
         return products;
     }
+
+    /**
+     * Function used in order to find an object of type Product in the database with respect to a given id
+     * @param id
+     * @return The desired Product object
+     */
     public Product findById(int id) {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -66,6 +80,10 @@ public class ProductDAO extends AbstractDAO<Product> {
         return st;
     }
 
+    /**
+     * Function used in order to create a less specific SELECT query
+     * @return The desired String containing the query
+     */
     private String createSelectQuery() {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT ");

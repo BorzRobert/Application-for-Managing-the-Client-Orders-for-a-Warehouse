@@ -1,5 +1,9 @@
 package Model;
 
+/**
+ * This class represents a model for a Client
+ * @author Borz Robert-Ionut
+ */
 public class Client {
 	private int clientId;
 	private String clientFirstName;
@@ -89,6 +93,10 @@ public class Client {
 		this.clientAge = clientAge;
 	}
 
+	/**
+	 * This method is used to create a String that describes the Client
+	 * @return A String consisting of a description of the Client
+	 */
 	@Override
 	public String toString() {
 		return "Client [id=" + clientId + ", lastName=" + clientLastName+" ]";

@@ -9,7 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.regex.Pattern;
-
+/**
+ * Class used in order to model the GUI for adding a client
+ */
 public class AddClientView extends JDialog {
     private JTextField ageTextField;
     private JTextField phoneNumberTextField;

@@ -1,5 +1,8 @@
 package Model;
-
+/**
+ * This class represents a model for an Order
+ * @author Borz Robert-Ionut
+ */
 public class Order {
     private int orderId;
     private int clientId;

@@ -11,6 +11,9 @@ import java.awt.event.ActionListener;
 import java.lang.reflect.Field;
 import java.util.List;
 
+/**
+ * Class used in order to model the GUI for displaying all the existing products
+ */
 public class ViewProductsView extends JDialog {
     private JTable table;
     private JPanel viewProductsPanel;

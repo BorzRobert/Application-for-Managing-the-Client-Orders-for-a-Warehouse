@@ -1,5 +1,8 @@
 package Model;
-
+/**
+ * This class represents a model for a Product
+ * @author Borz Robert-Ionut
+ */
 public class Product {
     private int productId;
     private String productName;
@@ -54,6 +57,10 @@ public class Product {
         this.productStock = productStock;
     }
 
+    /**
+     * This method is used to create a String that describes the Product
+     * @return A String consisting of a description of the Product
+     */
     public String toString() {
         return "Product [id=" + productId + ", Name=" + productName+" ]";
     }

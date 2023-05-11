@@ -9,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+/**
+ * Class used in order to model the GUI for the Client operations
+ */
 public class ClientView extends JDialog {
     private JPanel clientViewPanel;
     private JButton addClientButton;

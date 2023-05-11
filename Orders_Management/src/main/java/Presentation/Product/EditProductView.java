@@ -9,7 +9,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Class used in order to model the GUI for editing a product
+ */
 public class EditProductView extends JDialog {
     private JPanel editProductPanel;
     private JTextField productNameTextField;

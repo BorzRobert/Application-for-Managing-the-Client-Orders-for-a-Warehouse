@@ -13,6 +13,9 @@ import Model.Client;
 import Model.Order;
 import Presentation.MainView;
 
+/**
+ * Class used in order to run the program
+ */
 public class Start {
 	public static void main(String[] args) throws SQLException {
 		MainView myMainView=new MainView(null);

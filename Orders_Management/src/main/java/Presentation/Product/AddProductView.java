@@ -14,7 +14,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
-
+/**
+ * Class used in order to model the GUI for adding a product
+ */
 public class AddProductView extends JDialog {
     private JTextField productNameTextField;
     private JTextField productCategoryTextField;

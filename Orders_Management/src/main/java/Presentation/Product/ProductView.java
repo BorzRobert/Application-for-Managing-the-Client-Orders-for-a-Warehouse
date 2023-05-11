@@ -13,6 +13,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+/**
+ * Class used in order to model the GUI for the Product operations
+ */
 public class ProductView extends JDialog {
     private JButton addProductButton;
     private JButton editProductButton;
