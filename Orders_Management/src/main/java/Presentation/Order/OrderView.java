@@ -24,6 +24,7 @@ public class OrderView extends JDialog {
     private JButton addOrderButton;
     private JButton exitButton;
     private JPanel orderViewPanel;
+    private JButton viewOrdersButton;
 
     public OrderView(JFrame parent) {
         super(parent);
@@ -43,6 +44,12 @@ public class OrderView extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+            }
+        });
+        viewOrdersButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ViewOrderView myViewOrderView=new ViewOrderView(null);
             }
         });
         addOrderButton.addActionListener(new ActionListener() {
